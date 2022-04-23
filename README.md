@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/KaisBoulakhlas/base-apparel-coming-soon-master.git
-- Live Site URL: [base-apparel-coming-soon-master-chall]
+- Live Site URL: [https://base-apparel-coming-soon-master-chall.netlify.app/]
 
 ## My process
 
