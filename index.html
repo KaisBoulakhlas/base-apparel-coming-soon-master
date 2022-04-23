@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="" />
+  </header>
+  <div class="wrapper">
+    <img class="wrapper__image__mobile"  src="images/hero-mobile.jpg" alt="hero_mobile"/>
+    <img class="wrapper__image__desktop"  src="images/hero-desktop.jpg" alt="hero_desktop"/>
+  </div>
+  <main class="content">
+    <section class="content__section">
+      <h1 class="content__title--txt-uppercase--color-dark-grayish-red content__title--txt-fs-64--letter-spacing">
+        <span class="content__span--desatured-red content__span--fw-300">We're</span> 
+        coming soon
+      </h1>
+      <p class="content__paragraph content__paragraph--desatured-red">Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form name="form" method="post" class="form">
+          <input type="text" placeholder="Email Address" class="form__input"/>
+          <button name="form__submit" type="submit" class="form__submit">
+            <img class="form__icon-arrow" src="/images/icon-arrow.svg" alt="arrow"/>
+          </button> 
+      </form>
+      <p class="content__message"></p>
+    </section>
+  </main>
+</body>
+<script src="script.js" defer></script>
+</html>

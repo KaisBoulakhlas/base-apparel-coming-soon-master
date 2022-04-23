@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --lg-bg-pattern:linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --lg-icon-arrow:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); 
+    --desatured-red:hsl(0, 36%, 70%);
+    --soft-red:hsl(0, 93%, 68%);
+    --dark-grayish-red:hsl(0, 6%, 24%);
+    --fw-300:300;
+    --fw-400:400;
+    --fw-600:600;
+    --fs-body:16px;
+    --ff:'Josefin Sans', sans-serif;
+}
+
+*, *::after, *::before {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+
+body{
+    font-size:var(--fs-body);
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    width:100%;
+    height:auto;
+}
+
+.wrapper__image__mobile, .wrapper__image__desktop{
+    object-fit: cover;
+}
+
+.wrapper__image__desktop{
+    display:none;
+}
+
+.header{
+    padding: 2.25rem;
+}
+
+.header__logo{
+    max-width:150px;
+}
+
+.content{
+    padding: 4rem 2rem;
+    text-align: center;
+    background-image: url("images/bg-pattern-desktop.svg"), var(--lg-bg-pattern);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content__section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content__title--txt-uppercase--color-dark-grayish-red{
+    text-transform: uppercase;
+    color:var(--dark-grayish-red);
+}
+
+.content__title--txt-fs-64--letter-spacing {
+    font-size: 3rem;
+    letter-spacing: 0.25em;
+    line-height: 1.1;
+    margin-bottom:0.25em;
+}
+
+.content__span--desatured-red{
+    color:var(--desatured-red);
+}
+
+.content__span--fw-300{
+    font-weight:var(--fw-300);
+}
+
+.content__paragraph{
+    line-height: 1.6em;
+    margin-bottom: 1.5em;
+    font-size: 0.9rem;
+}
+
+.content__paragraph--desatured-red{
+    color:var(--desatured-red);
+}
+
+.form{
+    width: 100%;
+    position: relative;
+    max-height: 55px;
+    margin-top: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+
+.form__input{
+    width: 100%;
+    border-radius: 4rem;
+    padding: 1rem 2rem;
+    outline: none;
+    height: 100%;
+    border: 1px solid var(--desatured-red);
+    font-size: 1rem;
+}
+
+.form__input::placeholder{
+    color:var(--desatured-red);
+}
+
+.form__submit{
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    outline: 0;
+    border: 0;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0px;
+    top: 0;
+    background: var(--lg-icon-arrow);
+    box-shadow:0px 15px 15px 0px hsla(0, 36%, 70%,0.4);
+}
+
+.form__icon-arrow{
+    width:10px;
+}
+.form__submit:hover{
+    background:lightgrey;
+}
+
+.form__input.notValid{
+    border:2px solid red;
+}
+
+.form__submit.notValid::before{
+    display:block;
+}
+
+.form__submit::before{
+    content:url("images/icon-error.svg");
+    position: absolute;
+    left:-50%;
+    top: 25%;
+    display:none;
+    cursor: initial;
+}
+
+.content__message{
+    color:var(--dark-grayish-red);
+    margin:1rem 0 0 2rem;
+}
+
+@media screen and (min-width:1100px){
+    body {
+        display:grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr;
+        height:100vh;
+    }
+    .content__section {
+        align-items:flex-start;
+        width: 60%;
+        margin-top:20%;
+    }  
+
+    .header{
+        grid-column: 1;
+        grid-row:1;
+        padding: 2.25rem 0 5rem 0;
+        position: absolute;
+        left: 6rem;
+    }
+
+    .content{
+        grid-column: 1;
+        grid-row:2 / 3;
+        padding: 0rem 0rem 4rem 6rem;
+        text-align:left;
+        height: 100vh;
+    }
+
+    .wrapper{
+        grid-column: 2;
+        grid-row: span 2;
+    }
+
+    .wrapper__image__desktop{
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper__image__mobile{
+        display: none;
+    }
+
+    .content__paragraph{
+        line-height: 1.7em;
+        font-size: 1.1rem;
+    }
+
+    .content__title--txt-fs-64--letter-spacing{
+        font-size: 4rem;
+    }
+
+    .form{
+        max-width:100%;
+    }
+
+    .form__submit{
+        padding: 1rem 2.5rem;
+    }
+}
